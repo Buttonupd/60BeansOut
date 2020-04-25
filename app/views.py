@@ -1,15 +1,20 @@
 from flask import render_template
 from app import app
 from .request import get_sources
+from .models import news
+News = news.News
 
 @app.route('/')
 def index():
-    sports_sources = get_sources('sports')
-    print(sports_sources)
+    technology_sources = get_sources('technology')
+    business = get_sources('business')
+    entertainment = get_sources('entertainment')
+
+    print(technology_sources)
     title = '60BeansMade'
 
 
-    return render_template('index.html', title=title, sports=sports_sources)
+    return render_template('index.html', title=title, technology=technology_sources, business=business, entertainment=entertainment)
 
 @app.route('/articles')
 def article():

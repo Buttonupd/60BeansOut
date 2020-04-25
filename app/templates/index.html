@@ -9,6 +9,22 @@
         {% endif %}
         
         <body>
+            <ul>
+                {% for technology_source in technology %}
+                <li> {{technology_sources.title}} </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for business in business %}
+                <li> {{business.title}} </li>
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for entertainment in entertainment %}
+                <li> {{entertainment.title}} </li>
+                {% endfor %}
+            </ul>
+
 
         </body>
     </head>

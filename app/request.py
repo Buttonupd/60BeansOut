@@ -16,7 +16,7 @@ def get_sources(category):
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        sources_results = None
+        sources_results = ''
 
         if get_sources_response['totalResults']:
             sources_results_list = get_sources_response['totalResults']
