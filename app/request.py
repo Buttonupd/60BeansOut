@@ -35,6 +35,24 @@ def process_results(news_list):
     Returns :
         movie_results: A list of movie objects
     '''
+    sources_results = []
+    for source_item in news_list:
+         id = source_item.get('id')
+         name = source_item.get('name')
+         author = source_item.get('author')
+         title = source_item.get'(title)'
+         description = source_item.get('description')
+         url = source_item.get('url')
+         publishedAt = source_item.get('publishedAt')
+         content  = source_item.get('content')
+         urlToImage = source_item.get('urlToImage')
+
+         if urlToImage:
+             source_object = News(id, name, author, title, description, url, publishedAt, content, urlToImage)
+             sources_results.append(source_object)
+
+    return sources_results
+
 
 
 
