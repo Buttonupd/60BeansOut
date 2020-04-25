@@ -9,7 +9,7 @@ api_key = app.config['NEWS_API_KEY']
 base_url = app.config['NEWS_API_BASE_URL']
 
 def get_sources(category):
-     '''
+    '''
     Function that gets the json response to our url request
     '''
     get_sources_url = base_url.format(category, api_key)
@@ -26,7 +26,7 @@ def get_sources(category):
 
 
 def process_results(news_list):
-      '''
+    '''
     Function  that processes the movie result and transform them to a list of Objects
 
     Args:
@@ -40,7 +40,7 @@ def process_results(news_list):
          id = source_item.get('id')
          name = source_item.get('name')
          author = source_item.get('author')
-         title = source_item.get'(title)'
+         title = source_item.get('title')
          description = source_item.get('description')
          url = source_item.get('url')
          publishedAt = source_item.get('publishedAt')
