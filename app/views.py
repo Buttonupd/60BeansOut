@@ -39,12 +39,12 @@ def article():
    return render_template('index.html', title = title, technology=technology_sources,
    entertainment = entertainment, general=general, health=health, science=science,sports=sports,business=business)
 
-@app.route('/articles')
+@app.route('/articles/<int:id>')
 def read_articles_id(id):
-   news = get_source(id)
+   articles = get_source(id)
    title = f'{news.title}'
 
-   return render_template('articles.html', title=title, news=news)
+   return render_template('articles.html', title=title, articles=articles)
    
     
     
