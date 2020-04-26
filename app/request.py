@@ -3,6 +3,7 @@ import urllib.request
 import json
 from .models import news
 
+
 News = news.News
 
 api_key = app.config['NEWS_API_KEY']
@@ -16,10 +17,10 @@ def get_sources(category):
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-        sources_results = ''
+        sources_results = ""
 
-        if get_sources_response['totalResults']:
-            sources_results_list = get_sources_response['totalResults']
+        if get_sources_response['articles']:
+            sources_results_list = get_sources_response['articles']
             sources_results = process_results(sources_results_list)
 
     return sources_results

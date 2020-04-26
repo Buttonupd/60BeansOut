@@ -11,19 +11,41 @@
         <body>
             <ul>
                 {% for technology_source in technology %}
-                <li> {{technology_sources.title}} </li>
+                <li> {{technology_source.title}} </li>
                 {% endfor %}
             </ul>
+
             <ul>
-                {% for business in business %}
+                {% for business in business%}
                 <li> {{business.title}} </li>
                 {% endfor %}
             </ul>
+
             <ul>
                 {% for entertainment in entertainment %}
                 <li> {{entertainment.title}} </li>
                 {% endfor %}
             </ul>
+
+            <ul>
+                {% for general in general %}
+                <li> {{general.title}} </li>
+                {% endfor %}
+            </ul>
+
+            <ul>
+                {% for health in health %}
+                <li> {{health.title}} </li>
+                {% endfor %}
+            </ul>
+
+            <ul>
+                {% for science in science %}
+                <li> {{science.title}} </li>
+                {% endfor %}
+            </ul>
+            
+            
 
 
         </body>
