@@ -1,15 +1,6 @@
+{% extends 'base.html' %}
 {%import 'macros.html' as macro%}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{title}} </title>
-        {% else %}
-        <title>60BeansNow</title>
-        {% endif %}
-        
-        <body>
+{% block content %}
             <ul>
                 <h3>Business</h3>
                 {{macro.displaySourcesList(business)}} 
@@ -41,10 +32,4 @@
                 {{macro.displaySourcesList(health)}}
             
             </ul>
-            
-            
-
-
-        </body>
-    </head>
-</html>
+  {%endblock%}
