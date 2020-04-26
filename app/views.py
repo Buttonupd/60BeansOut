@@ -2,6 +2,7 @@ from flask import render_template
 from app import app
 from .request import get_sources
 from .models import news
+from .request import get_source
 
 
 @app.route('/')
@@ -37,6 +38,13 @@ def article():
 
    return render_template('index.html', title = title, technology=technology_sources,
    entertainment = entertainment, general=general, health=health, science=science,sports=sports,business=business)
+
+@app.route('/articles')
+def read_articles_id(id):
+   news = get_source(id)
+   title = f'{news.title}'
+
+   return render_template('articles.html', title=title, news=news)
    
     
     
