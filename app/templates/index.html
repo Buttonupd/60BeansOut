@@ -1,3 +1,4 @@
+{%import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,39 +11,35 @@
         
         <body>
             <ul>
-                {% for technology_source in technology %}
-                <li> {{technology_source.title}} </li>
-                {% endfor %}
+                <h3>Business</h3>
+                {{macro.displaySourcesList(business)}} 
+               
             </ul>
 
             <ul>
-                {% for business in business%}
-                <li> {{business.title}} </li>
-                {% endfor %}
+                <h3>Science</h3>
+                {{macro.displaySourcesList(science)}}
             </ul>
 
             <ul>
-                {% for entertainment in entertainment %}
-                <li> {{entertainment.title}} </li>
-                {% endfor %}
+                <h3>Sports</h3>
+                {{macro.displaySourcesList(sports)}}
             </ul>
 
             <ul>
-                {% for general in general %}
-                <li> {{general.title}} </li>
-                {% endfor %}
+                <h3>Entertainment</h3>
+                {{macro.displaySourcesList(entertainment)}}
             </ul>
 
             <ul>
-                {% for health in health %}
-                <li> {{health.title}} </li>
-                {% endfor %}
+                <h3>General</h3>
+               {{macro.displaySourcesList(general)}}
             </ul>
 
             <ul>
-                {% for science in science %}
-                <li> {{science.title}} </li>
-                {% endfor %}
+                <h3>Health</h3>
+                {{macro.displaySourcesList(health)}}
+            
             </ul>
             
             

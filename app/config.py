@@ -1,7 +1,7 @@
 
 
 class Config:
-    NEWS_API_BASE_URL = 'http://newsapi.org/v2/everything?domains=wsj.com?{}&apiKey={}'
+    NEWS_API_BASE_URL = 'http://newsapi.org/v2/top-headlines?country=us&category={}&apiKey={}'
     '''
     General configuration parent class
     '''
